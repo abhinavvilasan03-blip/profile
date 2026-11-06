@@ -93,6 +93,17 @@ h1, h2, h3, p { margin-top: 0; }
 .interest-card span { color: #a7cd69; font-size: 10px; }
 .interest-card h3 { margin: 7px 0; font-size: 17px; }
 .interest-card p { margin-bottom: 0; color: #a8b4aa; font-size: 12px; }
+.gallery { background: #151d18; }
+.gallery-heading { max-width: 1112px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr .9fr; align-items: end; gap: 45px; }
+.gallery-heading .eyebrow { margin-bottom: 9px; }
+.gallery-heading h2 { margin: 0; font-size: clamp(30px,4vw,46px); line-height: 1.17; letter-spacing: -1.5px; }
+.gallery-heading > p { max-width: 440px; margin: 0 0 4px; }
+.gallery-grid { max-width: 1112px; margin: 30px auto 0; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); grid-auto-rows: 190px; gap: 12px; }
+.gallery-card { position: relative; overflow: hidden; margin: 0; border: 1px solid #303c33; background: #1b261e; }
+.gallery-card-tall { grid-row: span 2; }
+.gallery-card img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+.gallery-card:hover img { transform: scale(1.04); }
+.gallery-card figcaption { position: absolute; inset: auto 0 0; padding: 35px 13px 12px; color: #f2f5ed; font-size: 12px; background: linear-gradient(transparent,#101613e8); }
 .goals { display: grid; grid-template-columns: .7fr 1.3fr; gap: 50px; background: #151d18; }
 .goal-content { max-width: 690px; }
 .goal-content p { color: #b3beb4; font-size: 14px; }
@@ -130,6 +141,8 @@ footer a:hover { color: #b4db70; }
     .about-tags { margin-top: 15px; }
     .projects-heading { grid-template-columns: 1fr; gap: 12px; }
     .project-grid { grid-template-columns: 1fr; }
+    .gallery-heading { grid-template-columns: 1fr; gap: 12px; }
+    .gallery-grid { grid-template-columns: repeat(2,minmax(0,1fr)); grid-auto-rows: 165px; }
     .project-card { min-height: auto; }
     .project-card p { min-height: 0; }
     .contact-panel { grid-template-columns: 1fr; }
@@ -138,6 +151,7 @@ footer a:hover { color: #b4db70; }
     .quick-facts { gap: 13px; flex-direction: column; }
     .achievement-grid, .interest-grid { grid-template-columns: 1fr; }
     .interests-top { align-items: flex-start; flex-direction: column; gap: 0; }
+    .gallery-grid { grid-auto-rows: 135px; gap: 8px; }
     .hero-photo img { max-height: 500px; }
     footer { align-items: flex-start; flex-direction: column; }
     .contact-panel { padding: 24px 19px; }
